@@ -305,17 +305,6 @@ section {
   position: relative;
 }
 
-.steps-container::before {
-  content: '';
-  position: absolute;
-  left: 24px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: var(--color-panel-border);
-  z-index: 0;
-}
-
 .step {
   display: flex;
   gap: 2rem;
@@ -324,6 +313,17 @@ section {
   z-index: 1;
 }
 .step:last-child { margin-bottom: 0; }
+
+.step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 48px;
+  bottom: -3rem;
+  width: 1px;
+  background: var(--color-panel-border);
+  z-index: 0;
+}
 
 .step-number {
   width: 48px;
