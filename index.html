@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirrorpad - Unleash Your Mac's Canvas</title>
+  <meta name="description" content="A powerful macOS-first app that transforms your tablet into a real-time drawing pad over your desktop with a transparent overlay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Gradients (matching App body) -->
+  <div class="bg-gradient bg-gradient-top"></div>
+  <div class="bg-gradient bg-gradient-bottom"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo-area">
+        <img src="assets/logo.svg" alt="Mirrorpad Logo" class="logo">
+        <span class="logo-text">Mirrorpad</span>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#download" class="btn btn-primary btn-sm">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero reveal">
+      <div class="container">
+        <h1 class="hero-title">Unleash Your Mac's <span class="text-accent">Canvas</span>.</h1>
+        <p class="hero-subtitle">Transform your tablet into a zero-latency drawing pad over your macOS desktop. Pure transparent overlay.</p>
+        
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">
+            Download for macOS
+          </a>
+        </div>
+
+        <div class="mockup-container reveal-delay">
+          <div class="mockup-frame">
+            <img src="assets/hud_action.gif" alt="Mirrorpad HUD animated" class="screenshot">
+            <div class="mockup-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features container">
+      <div class="section-header reveal">
+        <h2>Engineered for Precision</h2>
+        <p>A native macOS app delivering best-in-class drawing performance across your local network.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="color: var(--color-cyan)">⛶</div>
+          <h3>Transparent Overlay</h3>
+          <p>Draw seamlessly over any macOS window. The desktop remains fully visible underneath your strokes.</p>
+        </div>
+        
+        <div class="feature-card reveal" style="transition-delay: 100ms">
+          <div class="feature-icon" style="color: var(--color-orange)">⚡</div>
+          <h3>Real-Time Sync</h3>
+          <p>Ultra-low latency WebSocket relay ensures your tablet drawings instantly mirror on the desktop.</p>
+        </div>
+        
+        <div class="feature-card reveal" style="transition-delay: 200ms">
+          <div class="feature-icon" style="color: var(--color-cyan)">✒️</div>
+          <h3>Pressure & Tilt</h3>
+          <p>Preserves raw pointer metadata from your stylus, keeping your strokes perfectly nuanced and natural.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how" class="how-it-works container reveal">
+      <div class="section-header">
+        <h2>Simplicity Built-In</h2>
+        <p>Your tablet is just a browser tab away from becoming a powerful peripheral.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step reveal">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Launch the App</h3>
+            <p>Open Mirrorpad on your Mac. It launches silently into the menu bar.</p>
+          </div>
+        </div>
+        
+        <div class="step reveal" style="transition-delay: 100ms">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Connect Tablet</h3>
+            <p>Open the provided local URL in your iPad or tablet's web browser.</p>
+          </div>
+        </div>
+        
+        <div class="step reveal" style="transition-delay: 200ms">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Start Drawing</h3>
+            <p>Use the floating HUD to pick your tools. Your strokes instantly appear on the Mac.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content reveal">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="Mirrorpad Logo" class="footer-logo">
+        <span class="footer-title">Mirrorpad</span>
+      </div>
+      <p class="footer-tagline">Built with <span style="color: var(--color-orange)">♥</span> by CoderMana.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Copyright also owned by CoderMana Technologies Private Limited.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
