@@ -32,56 +32,83 @@
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main class="snap-container">
     
-    <!-- Hero Section -->
-    <section class="hero reveal">
+    <!-- Hero Text Section -->
+    <section class="hero-text reveal">
       <div class="container">
-        <h1 class="hero-title">Unleash Your Mac's <span class="text-accent">Canvas</span>.</h1>
-        <p class="hero-subtitle">Transform your tablet into a zero-latency drawing pad over your macOS desktop. Pure transparent overlay.</p>
-        
-        <div class="hero-actions">
-          <a href="#download" class="btn btn-primary">
-            Download for macOS
-          </a>
-        </div>
-
-        <div class="mockup-container reveal-delay">
-          <div class="mockup-frame">
-            <video autoplay loop muted playsinline class="screenshot">
-              <source src="assets/hud_demo.webm" type="video/webm">
-              <img src="assets/hud_demo.gif" alt="Mirrorpad HUD in action" class="screenshot">
-            </video>
-            <div class="mockup-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">Your Tablet is Your <span class="text-accent">New Canvas</span>.</h1>
+          <p class="hero-subtitle">Turn your iPad or Android tablet into a professional, low-latency drawing surface for macOS. No subscriptions, no cables, just pure creativity.</p>
+          
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary">
+              Get Mirrorpad for Mac
+            </a>
+            <a href="#features" class="btn btn-secondary">
+              See Features
+            </a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Demo Video Section -->
+    <section id="demo" class="demo-section reveal">
+      <div class="mockup-container full-width">
+        <div class="mockup-frame">
+          <video autoplay loop muted playsinline class="screenshot">
+            <source src="assets/demo.mp4" type="video/mp4">
+            <source src="assets/hud_demo.webm" type="video/webm">
+            <img src="assets/hud_demo.gif" alt="Mirrorpad HUD in action" class="screenshot">
+          </video>
+          <div class="mockup-overlay"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Features Section -->
-    <section id="features" class="features container">
+    <section id="features" class="features">
       <div class="section-header reveal">
-        <h2>Engineered for Precision</h2>
-        <p>A native macOS app delivering best-in-class drawing performance across your local network.</p>
+        <h2>Professional Grade Performance</h2>
+        <p>Built for artists and designers who demand precision, speed, and privacy.</p>
       </div>
       
       <div class="features-grid">
         <div class="feature-card reveal">
-          <div class="feature-icon" style="color: var(--color-cyan)">⛶</div>
-          <h3>Transparent Overlay</h3>
-          <p>Draw seamlessly over any macOS window. The desktop remains fully visible underneath your strokes.</p>
+          <div class="feature-icon" style="color: var(--color-gold)">⛶</div>
+          <h3>Seamless Overlay</h3>
+          <p>Draw directly over any app. Your tablet becomes a transparent glass layer over your macOS desktop.</p>
         </div>
         
         <div class="feature-card reveal" style="transition-delay: 100ms">
           <div class="feature-icon" style="color: var(--color-orange)">⚡</div>
-          <h3>Real-Time Sync</h3>
-          <p>Ultra-low latency WebSocket relay ensures your tablet drawings instantly mirror on the desktop.</p>
+          <h3>Zero-Lag Performance</h3>
+          <p>Engineered for speed, delivering a near-instant, lag-free drawing experience that keeps up with your every stroke.</p>
         </div>
         
         <div class="feature-card reveal" style="transition-delay: 200ms">
-          <div class="feature-icon" style="color: var(--color-cyan)">✒️</div>
-          <h3>Pressure & Tilt</h3>
-          <p>Preserves raw pointer metadata from your stylus, keeping your strokes perfectly nuanced and natural.</p>
+          <div class="feature-icon" style="color: var(--color-gold)">✒️</div>
+          <h3>Precision Metadata</h3>
+          <p>Native support for pressure sensitivity and tilt ensures your digital strokes feel as natural as ink on paper.</p>
+        </div>
+
+        <div class="feature-card reveal" style="transition-delay: 300ms">
+          <div class="feature-icon" style="color: var(--color-orange)">🔒</div>
+          <h3>Private & Secure</h3>
+          <p>Local-only streaming with password protection. Your data never leaves your network—no cloud, no accounts.</p>
+        </div>
+        
+        <div class="feature-card reveal" style="transition-delay: 400ms">
+          <div class="feature-icon" style="color: var(--color-gold)">🌐</div>
+          <h3>Universal Access</h3>
+          <p>No tablet app needed. Just open a URL on any modern browser to start drawing instantly.</p>
+        </div>
+        
+        <div class="feature-card reveal" style="transition-delay: 500ms">
+          <div class="feature-icon" style="color: var(--color-orange)">🛠️</div>
+          <h3>Floating HUD</h3>
+          <p>A customizable on-screen display gives you quick access to brush sizes, colors, and settings.</p>
         </div>
       </div>
     </section>
@@ -89,32 +116,32 @@
     <!-- How it Works Section -->
     <section id="how" class="how-it-works container reveal">
       <div class="section-header">
-        <h2>Simplicity Built-In</h2>
-        <p>Your tablet is just a browser tab away from becoming a powerful peripheral.</p>
+        <h2>Ready in Seconds</h2>
+        <p>Skip the complex setup and get straight to your creative workflow.</p>
       </div>
 
       <div class="steps-container">
         <div class="step reveal">
           <div class="step-number">1</div>
           <div class="step-content">
-            <h3>Launch the App</h3>
-            <p>Open Mirrorpad on your Mac. It launches silently into the menu bar.</p>
+            <h3>Launch Mirrorpad</h3>
+            <p>Open the app on your Mac. It instantly creates a transparent drawing layer over your entire desktop.</p>
           </div>
         </div>
         
         <div class="step reveal" style="transition-delay: 100ms">
           <div class="step-number">2</div>
           <div class="step-content">
-            <h3>Connect Tablet</h3>
-            <p>Open the provided local URL in your iPad or tablet's web browser.</p>
+            <h3>Scan or Browse</h3>
+            <p>Scan the QR code or enter the secure local URL on your tablet's web browser.</p>
           </div>
         </div>
         
         <div class="step reveal" style="transition-delay: 200ms">
           <div class="step-number">3</div>
           <div class="step-content">
-            <h3>Start Drawing</h3>
-            <p>Use the floating HUD to pick your tools. Your strokes instantly appear on the Mac.</p>
+            <h3>Create Without Limits</h3>
+            <p>Start drawing. Your strokes are mirrored in real-time with pixel-perfect precision.</p>
           </div>
         </div>
       </div>
@@ -131,7 +158,7 @@
       </div>
       <p class="footer-tagline">Built with <span style="color: var(--color-orange)">♥</span> by CoderMana.</p>
       <div class="footer-bottom">
-        <p>&copy; 2026 Copyright also owned by CoderMana Technologies Private Limited.</p>
+        <p>&copy; <span id="copyright-year">2026</span> CoderMana Technologies Private Limited. All rights reserved.</p>
       </div>
     </div>
   </footer>

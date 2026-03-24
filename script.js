@@ -1,24 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Intersection Observer for scroll animations
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
+  // Intersection Observer for scroll animations with fallback
+  if ('IntersectionObserver' in window) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        // Unobserve after revealing
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Unobserve after revealing
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
 
-  // Select all elements with the 'reveal' class
-  const revealElements = document.querySelectorAll('.reveal');
-  revealElements.forEach(el => observer.observe(el));
+    // Select all elements with the 'reveal' class
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+  } else {
+    // Fallback: reveal all elements immediately if observer isn't supported
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+  }
 
   // Add scroll effect to header
   const header = document.querySelector('header');
@@ -31,4 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
       header.style.boxShadow = 'none';
     }
   });
+
+  // Update copyright year
+  const yearEl = document.getElementById('copyright-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear().toString();
+  }
 });
