@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Lucide icons
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+
   // Intersection Observer for scroll animations with fallback
   if ('IntersectionObserver' in window) {
     const observerOptions = {
