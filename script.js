@@ -47,4 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear().toString();
   }
+
+  // Update last updated date
+  const lastUpdatedEl = document.getElementById('last-updated-date');
+  if (lastUpdatedEl) {
+    const date = new Date();
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    lastUpdatedEl.textContent = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+  }
 });
